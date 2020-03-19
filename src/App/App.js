@@ -6,11 +6,17 @@ import logo from '../assets/Health-Sqyre-Logo.png';
 
 class App extends Component{
   render() {
-    console.log('dataz', DATA)
-    const card = DATA.map(data => (
+    const sortedData = DATA.sort(function (a, b) {
+      return a.price - b.price;
+    });
+
+    const card = sortedData.map(data => (
       <Card
         name={data.name}
+        price={data.price}
         description={data.description}
+        vendor={data.vendor.name}
+        key={data.name + data.id}
       />
     ));
     return (

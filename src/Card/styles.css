@@ -20,3 +20,9 @@
 .description {
   font-size: 1rem;
 }
+
+.sub-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
